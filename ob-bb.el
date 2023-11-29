@@ -1,4 +1,4 @@
-;;; ob-babashka.el --- org-babel functions for ClojureScript evaluation -*- lexical-binding: t; -*-
+;;; ob-bb.el --- org-babel functions for ClojureScript evaluation -*- lexical-binding: t; -*-
 
 ;; Author: Adam James Vermeer
 ;; Maintainer: Adam James Vermeer
@@ -89,9 +89,9 @@
 (define-derived-mode bb-mode clojure-mode "bb"
   "Major mode for editing bb code.")
 
-(provide 'ob-babashka)
+(provide 'ob-bb)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
 ;; End:
-;;; ob-babashka.el ends here
+;;; ob-bb.el ends hereb

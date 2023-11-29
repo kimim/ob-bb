@@ -5,9 +5,11 @@ Modified from this [gist](https://gist.github.com/lasvice/aad29c970f1c221d566328
 ## Installation
 Just for personal use, so currently not published to Melpha.
 Install with [use-package](https://github.com/jwiegley/use-package) with [straight.el](https://github.com/radian-software/straight.el):
+
 ```emacs-lisp
-(use-package ob-babashka
-  :straight (:type git :host github :repo "lasvice/ob-babashka"))
+(use-package ob-bb
+  :straight (:type git :host github :repo "kimim/ob-bb"))
+
 (use-package org
   :straight (:type built-in)
   :config
@@ -19,6 +21,25 @@ Install with [use-package](https://github.com/jwiegley/use-package) with [straig
       (babashka . t))))
 ```
 
+Install manually:
+
+```shell
+git clone https://github.com/kimim/ob-bb
+```
+
+```emacs-lisp
+(use-package ob-bb
+  :load-path "/path/to/ob-bb")
+
+(use-package org
+  :config
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '(
+      ;; other languages
+      ;; ...
+      (bb . t))))
+```
 ## Usage
 
 ```org
@@ -27,4 +48,3 @@ Install with [use-package](https://github.com/jwiegley/use-package) with [straig
   (+ n 2)
 #+end_src
 ```
-
