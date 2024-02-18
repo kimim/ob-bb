@@ -51,7 +51,10 @@
 
 (defun ob-bb-escape-quotes (str-val)
   "Escape quotes for STR-VAL so that Lumo can understand."
-  (replace-regexp-in-string "\"" "\\\"" str-val 'FIXEDCASE 'LITERAL))
+  (replace-regexp-in-string
+   "\"" "\\\""
+   (string-replace "\\" "\\\\" str-val)
+   'FIXEDCASE 'LITERAL))
 
 (defun org-babel-expand-body:bb (body params)
   "Expand BODY according to PARAMS, return the expanded body."
