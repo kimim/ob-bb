@@ -18,7 +18,7 @@ Install with [use-package](https://github.com/jwiegley/use-package) with [straig
    '(
       ;; other languages
       ;; ...
-      (babashka . t))))
+      (bb . t))))
 ```
 
 Install manually:
